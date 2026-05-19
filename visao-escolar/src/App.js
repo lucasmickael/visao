@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Background from './components/Background';
 import LeftPanel from './components/LeftPanel';
 import LoginCard from './components/LoginCard';
+import CoordinatorResponse from './components/CoordinatorResponse';
 
 const styles = {
   page: {
@@ -43,6 +44,17 @@ const responsiveCSS = `
 `;
 
 export default function App() {
+  const [page, setPage] = useState('login');
+
+  if (page === 'coordinator') {
+    return (
+      <>
+        <style>{responsiveCSS}</style>
+        <CoordinatorResponse onBack={() => setPage('login')} />
+      </>
+    );
+  }
+
   return (
     <>
       <style>{responsiveCSS}</style>
