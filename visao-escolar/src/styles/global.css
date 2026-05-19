@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #1a1a8c;
+  --blue-dark: #2222b0;
+  --blue-mid: #3333cc;
+  --teal: #00bcd4;
+  --teal-dark: #0097a7;
+  --white: #ffffff;
+  --off-white: #f4f6fb;
+  --text-dark: #0d0d5e;
+  --text-muted: #6b7280;
+  --shadow-card: 0 20px 60px rgba(26, 26, 140, 0.12);
+  --shadow-btn-blue: 0 8px 30px rgba(26, 26, 140, 0.35);
+  --shadow-btn-teal: 0 8px 30px rgba(0, 188, 212, 0.35);
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  background: var(--off-white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  color: var(--blue-mid);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
